@@ -3,7 +3,7 @@ from bs4 import BeautifulSoup
 import pandas as pd
 
 
-print('Web scraping of monster website to search jobs')
+print('Web scraping of monster website search jobs')
 string = '10'
 url = 'https://www.monster.com/jobs/search/?q=Software-Developer&stpage=1&page={}'.format(string)
 page = requests.get(url)
