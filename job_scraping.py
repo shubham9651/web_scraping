@@ -2,6 +2,8 @@ import requests
 from bs4 import BeautifulSoup
 import pandas as pd
 
+
+print('Web scraping of monster website to search jobs')
 string = '10'
 url = 'https://www.monster.com/jobs/search/?q=Software-Developer&stpage=1&page={}'.format(string)
 page = requests.get(url)
@@ -40,7 +42,7 @@ jobs = pd.DataFrame({
     'Time' : job_time
 })
 
-#To save the dataframe in csv
+
 file_to_save = 'jobs.csv'
 jobs.to_csv(file_to_save,index=False)
 print(jobs)
